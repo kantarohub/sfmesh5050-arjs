@@ -17,23 +17,23 @@
       
       <!-- 1. 外部ファイルの定義（プリロード） -->
       <a-assets>
-        <a-asset-item id="my-model" src="images/3d modeling mesh 5050のコピー.glb"></a-asset-item>
+        <a-asset-item id="my-model" src="images/3dmodelingmesh5050.glb"></a-asset-item>
       </a-assets>
 
       <!-- 2. 自作マーカーの設定 -->
       <a-marker 
        type="pattern" 
        url="pattern-qr_sfmesh5050_site.patt"
-       raycaster="objects: .clickable"emitevents="true"
+       raycaster="objects: .clickable" emitevents="true"
        cursor="fuse: false; rayOrigin: mouse;">
         
        <!-- 2. 3Dモデルの設定 -->
        <a-entity
-        gltf-model="images/3d modeling mesh 5050のコピー.glb"
+        gltf-model="images/3dmodelingmesh5050.glb"
         class="clickable"
         gesture-handler="rotationFactor: 1"
         position="0 0 0"
-        scale="10 10 10">
+        scale="1 1 1">
 
        </a-entity>
         
