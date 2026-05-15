@@ -23,20 +23,19 @@
       <!-- 2. 自作マーカーの設定 -->
       <a-marker 
        type="pattern" 
-       url="pattern-qr_sfmesh5050_site.patt" <!-- ここに作成した.pattファイルのパスを入れる -->
-       raycaster="objects: .clickable"
-       emitevents="true"
+       url="pattern-qr_sfmesh5050_site.patt"
+       raycaster="objects: .clickable"emitevents="true"
        cursor="fuse: false; rayOrigin: mouse;">
         
        <!-- 2. 3Dモデルの設定 -->
-    <a-entity
-      gltf-model="images/3d modeling mesh 5050のコピー.glb"
-      class="clickable"
-      gesture-handler="rotationFactor: 1"
-      position="0 0 0"
-      scale="1 1 1">
+       <a-entity
+        gltf-model="images/3d modeling mesh 5050のコピー.glb"
+        class="clickable"
+        gesture-handler="rotationFactor: 1"
+        position="0 0 0"
+        scale="1 1 1">
 
-    </a-entity>
+       </a-entity>
         
       </a-marker>
 
