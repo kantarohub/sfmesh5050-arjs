@@ -1,35 +1,37 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>SFmesh AR marker</title>
-    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
-    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
-  </head>
-  
-  <body style="margin: 0; overflow: hidden;">
-    <a-scene embedded arjs>
-      
-      <!-- 1. 外部ファイルの定義（プリロード） -->
-      <a-assets>
-        <a-asset-item id="my-model" src="images/3d modeling mesh 5050のコピー.glb"></a-asset-item>
-      </a-assets>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SF Mesh5050 - AR体験</title>
+    <!-- 外部CSSの読み込み -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-      <!-- 2. 自作マーカーの設定 -->
-      <a-marker type="pattern" url="pattern-SFMESH_mark.patt">
-        
-        <!-- 3. 自作3Dモデルを表示 -->
-        <a-gltf-model 
-          src="images/3d modeling mesh 5050のコピー.glb" 
-          scale="25 25 25"
-          position="0 0 0" 
-          rotation="0 0 0">
-        </a-gltf-model>
-        
-      </a-marker>
+<div class="container">
+    <header>
+        <h1 class="product-name">SF Mesh 5050</h1>
+        <p class="tagline">スマートフォンのカメラでAR体験</p>
+    </header>
 
-      <a-entity camera></a-entity>
-      
-    </a-scene>
-  </body>
+    <main>
+        <section class="how-to">
+            <h3>使い方</h3>
+            <ol>
+                <li>下のボタンを押してカメラを起動します。</li>
+                <li>カメラの使用許可を「許可」にしてください。</li>
+                <li>ARマーカーにカメラをかざすと、3Dモデルが表示されます。</li>
+            </ol>
+        </section>
+
+        <a href="ar.html" class="start-btn">ARカメラを起動する</a>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 3i.野村貫太郎事務所</p>
+    </footer>
+</div>
+
+</body>
 </html>
