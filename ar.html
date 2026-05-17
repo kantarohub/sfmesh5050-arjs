@@ -5,10 +5,19 @@
     <title>SFmesh AR marker</title>
     <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
     <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+    
+    <!-- 💡 追加：指操作（ピンチ・スワイプ）を可能にする拡張スクリプト -->
+    <script src="https://raw.githack.com/fcor/arjs-gestures/master/dist/gestures.js"></script>
   </head>
   
   <body style="margin: 0; overflow: hidden;">
-    <a-scene embedded arjs>
+    
+    <!-- 💡 変更：gesture-detector を追加（画面全体のタッチを検知） -->
+    <!-- 合わせて、デバッグ用の赤枠などを非表示にする設定（debugUIEnabled: false）も追加しています -->
+    <a-scene 
+      embedded 
+      arjs="sourceType: webcam; debugUIEnabled: false;" 
+      gesture-detector>
       
       <!-- 1. 外部ファイルの定義（プリロード） -->
       <a-assets>
@@ -16,14 +25,24 @@
       </a-assets>
 
       <!-- 2. 自作マーカーの設定 -->
-      <a-marker type="pattern" url="pattern-qr_sfmesh5050_site.patt">
+      <!-- 💡 変更：画面のタップ位置と3Dモデルを衝突判定するための raycaster や cursor 設定を追加 -->
+      <a-marker 
+        type="pattern" 
+        url="pattern-qr_sfmesh5050_site.patt"
+        raycaster="objects: .clickable"
+        emitevents="true"
+        cursor="fuse: false; rayOrigin: mouse;">
         
         <!-- 3. 自作3Dモデルを表示 -->
+        <!-- 💡 変更：class="clickable" と gesture-handler を追加 -->
+        <!-- 💡 補足：src を1番で定義したアセットID（#my-model）に紐付け直して軽量化しています -->
         <a-gltf-model 
-          src="images/3dmodelingmesh5050.glb" 
+          src="#my-model" 
           scale="35 35 35"
           position="0 0 0" 
-          rotation="0 0 0">
+          rotation="0 0 0"
+          class="clickable"
+          gesture-handler>
         </a-gltf-model>
         
       </a-marker>

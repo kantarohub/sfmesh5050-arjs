@@ -7,7 +7,8 @@
     <!-- 外部CSSの読み込み -->
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<!-- 💡 bodyタグに welcome-page クラスを追加しました -->
+<body class="welcome-page">
 
 <div class="container">
     <header>
@@ -16,22 +17,21 @@
     </header>
 
     <main>
-        <!-- index.html の <section class="how-to"> の中を書き換え -->
-<section class="how-to">
-    <h3>使い方</h3>
-    <ol>
-        <li>下のボタンを押してカメラを起動します。</li>
-        <li>カメラの使用許可を「許可」にしてください。</li>
-        <li><strong>下のマーカー</strong>をカメラの枠内に収まるようにかざしてください。</li>
-    </ol>
+        <section class="how-to">
+            <h3>使い方</h3>
+            <ol>
+                <li>下のボタンを押してカメラを起動します。</li>
+                <li>カメラの使用許可を「許可」にしてください。</li>
+                <li><strong>下のマーカー</strong>をカメラの枠内に収まるようにかざしてください。</li>
+            </ol>
 
-    <!-- マーカー画像表示エリア -->
-    <div class="marker-preview">
-        <p>対象のマーカー：</p>
-        <img src="images/pattern-qr_sfmesh5050_site.png" alt="ARマーカー" class="marker-img">
-        <p class="marker-tip">※この画像を印刷するか、別の画面に表示して読み取ってください。</p>
-    </div>
-</section>
+            <!-- マーカー画像表示エリア -->
+            <div class="marker-preview">
+                <p>対象のマーカー：</p>
+                <img src="images/pattern-qr_sfmesh5050_site.png" alt="ARマーカー" class="marker-img">
+                <p class="marker-tip">※この画像を印刷するか、別の画面に表示して読み取ってください。</p>
+            </div>
+        </section>
 
         <a href="ar.html" class="start-btn">ARカメラを起動する</a>
     </main>

@@ -3,8 +3,12 @@ body {
     margin: 0;
     padding: 0;
     font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
-    background-color: #f0f2f5;
     color: #333;
+}
+
+/* 💡 案内ページ（index.html）専用のスタイル */
+body.welcome-page {
+    background-color: #f0f2f5;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -96,7 +100,7 @@ footer {
     text-align: center;
     background: #fff;
     padding: 15px;
-    border: 2px dashed #ccc; /* 点線の枠で「ここを映す」感を出す */
+    border: 2px dashed #ccc;
     border-radius: 10px;
 }
 
@@ -108,14 +112,14 @@ footer {
 }
 
 .marker-img {
-    width: 120px; /* 小さめに表示 */
+    width: 120px;
     height: auto;
     border-radius: 5px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
 .marker-tip {
-    font-size: 0.75rem !important; /* 注意書きを小さく */
+    font-size: 0.75rem !important;
     color: #888 !important;
     margin-top: 10px !important;
     font-weight: normal !important;
