@@ -7,7 +7,6 @@
     <!-- 外部CSSの読み込み -->
     <link rel="stylesheet" href="style.css">
 </head>
-<!-- 💡 bodyタグに welcome-page クラスを追加しました -->
 <body class="welcome-page">
 
 <div class="container">
@@ -24,6 +23,38 @@
                 <li>カメラの使用許可を「許可」にしてください。</li>
                 <li><strong>下のマーカー</strong>をカメラの枠内に収まるようにかざしてください。</li>
             </ol>
+
+            <!-- 📷 カメラ起動手順の視覚的ガイド（画像2枚） -->
+            <div class="ar-guide-container">
+                <div class="ar-steps-flex">
+                    
+                    <!-- ステップ1 -->
+                    <div class="ar-step">
+                        <p class="ar-step-text">
+                            <span class="highlight-badge">STEP 1</span><br>
+                            「許可」ボタンをタップします。
+                        </p>
+                        <div class="ar-guide-img-wrapper">
+                            <!-- ※実際の画像パス（例: images/step1.png）に合わせてください -->
+                            <img src="images/IMG_camera-git.PNG" alt="カメラ起動ボタンの確認" class="ar-guide-img">
+                        </div>
+                    </div>
+
+                    <!-- ステップ2 -->
+                    <div class="ar-step">
+                        <p class="ar-step-text">
+                            <span class="highlight-badge">STEP 2</span><br>
+                            アクセスの確認画面が出たら、<strong>「Allow」</strong>を選択します。
+                        </p>
+                        <div class="ar-guide-img-wrapper">
+                            <!-- ※実際の画像パス（例: images/step2.png）に合わせてください -->
+                            <img src="images/IMG_camera-ip.PNG" alt="カメラアクセス許可の確認" class="ar-guide-img">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <!-- ガイドここまで -->
 
             <!-- マーカー画像表示エリア -->
             <div class="marker-preview">

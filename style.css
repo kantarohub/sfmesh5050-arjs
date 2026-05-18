@@ -124,3 +124,62 @@ footer {
     margin-top: 10px !important;
     font-weight: normal !important;
 }
+
+/* ==========================================================================
+   💡 追加：カメラ起動手順（画像2枚）のスタイル
+   ========================================================================== */
+.ar-guide-container {
+    margin-top: 15px;
+    background-color: #fff; /* カード内の要素として馴染む白背景 */
+    padding: 15px;
+    border: 1px solid #eee;
+    border-radius: 12px;
+}
+
+.ar-steps-flex {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* ステップ間の余白 */
+}
+
+.ar-step {
+    background: #fdfdfd;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #f0f0f0;
+}
+
+.ar-step-text {
+    font-size: 0.85rem;
+    line-height: 1.5;
+    color: #444;
+    margin-top: 0;
+    margin-bottom: 8px;
+    text-align: left;
+}
+
+/* ステップ番号のバッジ */
+.highlight-badge {
+    background-color: #e7f5ff;
+    color: #007bff;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 0.75rem;
+    display: inline-block;
+    margin-bottom: 4px;
+}
+
+/* 画像エリア */
+.ar-guide-img-wrapper {
+    text-align: center;
+}
+
+.ar-guide-img {
+    width: 100%; /* 横幅いっぱいに綺麗にフィット */
+    max-width: 240px; /* 大きくなりすぎないように制限 */
+    height: auto;
+    border-radius: 6px;
+    border: 1px solid #e5e5e5;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+}
